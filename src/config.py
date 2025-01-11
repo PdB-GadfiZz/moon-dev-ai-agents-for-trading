@@ -35,7 +35,7 @@ address = '4wgfCBf2WwLSRKLef9iW7JXZ2AfkxUxGM4XcKpHm3Sin' # YOUR WALLET ADDRESS H
 usd_size = 25  # Size of position to hold
 max_usd_order_size = 3  # Max order size
 tx_sleep = 30  # Sleep between transactions
-slippage = 199  # Slippage settings
+slippage = 100  # Slippage settings
 
 # Risk Management Settings 🛡️
 CASH_PERCENTAGE = 20  # Minimum % to keep in USDC as safety buffer (0-100)
@@ -49,10 +49,10 @@ SLEEP_BETWEEN_RUNS_MINUTES = 15  # How long to sleep between agent runs 🕒
 
 
 # Max Loss/Gain Settings FOR RISK AGENT 1/5/25
-USE_PERCENTAGE = False  # If True, use percentage-based limits. If False, use USD-based limits
+USE_PERCENTAGE = True  # If True, use percentage-based limits. If False, use USD-based limits
 
 # USD-based limits (used if USE_PERCENTAGE is False)
-MAX_LOSS_USD = 25  # Maximum loss in USD before stopping trading
+MAX_LOSS_USD = 10  # Maximum loss in USD before stopping trading
 MAX_GAIN_USD = 25 # Maximum gain in USD before stopping trading
 
 # USD MINIMUM BALANCE RISK CONTROL
@@ -64,7 +64,7 @@ MAX_LOSS_PERCENT = 5  # Maximum loss as percentage (e.g., 20 = 20% loss)
 MAX_GAIN_PERCENT = 5  # Maximum gain as percentage (e.g., 50 = 50% gain)
 
 # Transaction settings ⚡
-slippage = 199  # 500 = 5% and 50 = .5% slippage
+slippage = 100  # 500 = 5% and 50 = .5% slippage
 PRIORITY_FEE = 100000  # ~0.02 USD at current SOL prices
 orders_per_open = 3  # Multiple orders for better fill rates
 
@@ -78,7 +78,7 @@ DATA_TIMEFRAME = '1H'  # 1m, 3m, 5m, 15m, 30m, 1H, 2H, 4H, 6H, 8H, 12H, 1D, 3D, 
 SAVE_OHLCV_DATA = False  # 🌙 Set to True to save data permanently, False will only use temp data during run
 
 # AI Model Settings 🤖
-AI_MODEL = "claude-3-haiku-20240307"  # Claude model to use: claude-3-haiku-20240307,claude-3-sonnet-20240229, claude-3-opus-20240229
+AI_MODEL = "gpt-4o"  # Claude model to use: claude-3-haiku-20240307,claude-3-sonnet-20240229, claude-3-opus-20240229
 AI_MAX_TOKENS = 1024  # Max tokens for response
 AI_TEMPERATURE = 0.7  # Creativity vs precision (0-1)
 
